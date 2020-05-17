@@ -30,6 +30,8 @@
     "webpack-dev-server": "^3.10.3"
   },
   "dependencies": {
-    "antd": "^4.2.0"
+    "antd": "^4.2.0",
+    "axios": "^0.19.2",
+    "braft-editor": "^2.3.9"
   }
 }

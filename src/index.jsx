@@ -1,5 +1,11 @@
+/* eslint-disable */
 import React from 'react';
 import { render } from 'react-dom';
-import Example from './components/Example';
+import Opinions from './components/Opinions';
 
-render(<Example />, document.getElementById('root'));
+render(
+    <div>
+        <Opinions AppKey={'a9035f7e-8d1f-11ea-bc55-0242ac130003'} />
+    </div>
+    ,
+    document.getElementById('root'));
