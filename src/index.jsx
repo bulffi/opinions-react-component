@@ -5,7 +5,7 @@ import Opinions from './components/Opinions';
 
 render(
     <div>
-        <Opinions AppKey={'a9035f7e-8d1f-11ea-bc55-0242ac130003'} />
+        <Opinions AppKey={'f32cf350-a610-418a-ac94-7b0fd125a77c'} pageSize = {1} />
     </div>
     ,
     document.getElementById('root'));

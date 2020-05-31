@@ -63,7 +63,7 @@ export default class Comment extends React.Component{
                         </Form.Item>
 
                         <Form.Item>
-                            <Button type="primary" htmlType="submit">
+                            <Button loading = {this.props.loading} type="primary" htmlType="submit">
                                 Submit
                             </Button>
                         </Form.Item>
