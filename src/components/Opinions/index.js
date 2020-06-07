@@ -40,7 +40,8 @@ export default class Opinions extends React.Component {
                     url: window.location.href,
                     appKey: this.props.AppKey,
                     pageSize: this.props.pageSize,
-                    lastID: this.state.mainCommentLastId
+                    lastID: this.state.mainCommentLastId,
+                    userId:this.props.userId
                 }
             }).then((response) => {
                 message.success('Loading success')
@@ -78,7 +79,8 @@ export default class Opinions extends React.Component {
                     appKey: this.props.AppKey,
                     pageSize: this.props.pageSize,
                     lastID: this.state.subCommentLastId,
-                    fatherID: this.state.currentFatherID
+                    fatherID: this.state.currentFatherID,
+                    userId:this.props.userId
                 }
             }).then((response) => {
             message.success('Loading success')
@@ -114,7 +116,8 @@ export default class Opinions extends React.Component {
             params: {
                 url: window.location.href,
                 appKey: this.props.AppKey,
-                pageSize: this.props.pageSize
+                pageSize: this.props.pageSize,
+                userId:this.props.userId
             }
         }
         ).then(
@@ -155,6 +158,7 @@ export default class Opinions extends React.Component {
                     appKey: this.props.AppKey,
                     pageSize: this.props.pageSize,
                     fatherID,
+                    userId:this.props.userId,
                 }
             }
         ).then(
@@ -211,10 +215,11 @@ export default class Opinions extends React.Component {
             content: contentInRAW,
             url: window.location.href,
             authorName: name,
-            email: email
+            email: email,
         }, {
             params: {
-                AppKey: this.props.AppKey
+                AppKey: this.props.AppKey,
+                userId:this.props.userId
             }
         }).then(
             () => {
@@ -259,7 +264,8 @@ export default class Opinions extends React.Component {
             FatherID: this.state.currentFatherID
         }, {
             params: {
-                AppKey: this.props.AppKey
+                AppKey: this.props.AppKey,
+                userId:this.props.userId
             }
         }).then(
             () => {
