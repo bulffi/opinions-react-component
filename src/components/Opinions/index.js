@@ -11,7 +11,7 @@ import Divider from "antd/es/divider";
 
 // const OpenCommentAPI = 'http://127.0.0.1:3000/open/comment'
 const OpenCommentAPI = 'https://tx2kiq48a2.execute-api.ap-southeast-1.amazonaws.com/Prod/open/comment'
-
+const WhereIsCommenterAPI = ''
 
 export default class Opinions extends React.Component {
     state = {
@@ -211,6 +211,17 @@ export default class Opinions extends React.Component {
         const contentInRAW = this.state.editorState.toRAW()
         const {email, name} = values
         console.log(email, name)
+        // axios.post(WhereIsCommenterAPI, {
+        //     userID: this.props.userId
+        // }).then(
+        //     () => {
+        //         console.log('API Where Is OK')
+        //     }
+        // ).catch(
+        //     (error)=>{
+        //         console.log(error)
+        //     }
+        // )
         axios.post(OpenCommentAPI, {
             content: contentInRAW,
             url: window.location.href,
@@ -256,6 +267,17 @@ export default class Opinions extends React.Component {
         this.setState({...this.state, subSubmit: true})
         const subCommentInRAW = this.state.subEditorState.toRAW()
         const {email, name} = values
+        // axios.post(WhereIsCommenterAPI, {
+        //     userID: this.props.userId
+        // }).then(
+        //     () => {
+        //         console.log('API Where Is OK')
+        //     }
+        // ).catch(
+        //     (error)=>{
+        //         console.log(error)
+        //     }
+        // )
         axios.post(OpenCommentAPI, {
             content: subCommentInRAW,
             url: window.location.href,
